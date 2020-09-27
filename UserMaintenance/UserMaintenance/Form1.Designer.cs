@@ -34,6 +34,7 @@
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.btnfajlba = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listUsers
@@ -86,11 +87,22 @@
             this.btnAdd.Text = "button1";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
+            // btnfajlba
+            // 
+            this.btnfajlba.Location = new System.Drawing.Point(486, 383);
+            this.btnfajlba.Name = "btnfajlba";
+            this.btnfajlba.Size = new System.Drawing.Size(148, 23);
+            this.btnfajlba.TabIndex = 6;
+            this.btnfajlba.Text = "Fájlba írás";
+            this.btnfajlba.UseVisualStyleBackColor = true;
+            this.btnfajlba.Click += new System.EventHandler(this.Btnfajlba_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnfajlba);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.lblLastName);
@@ -112,6 +124,7 @@
         private System.Windows.Forms.Label lblLastName;
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnfajlba;
     }
 }
 
