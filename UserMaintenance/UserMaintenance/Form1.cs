@@ -18,8 +18,8 @@ namespace UserMaintenance
         public Form1()
         {
             InitializeComponent();
-            lblLastName.Text = Resource.FullName;
-            lblFirstName.Text = Resource.FullName;
+            lblLastName.Text = Resource.LastName;
+            lblFirstName.Text = Resource.FirstName;
             btnAdd.Text = Resource.Add;
 
             listUsers.DataSource = users;
@@ -37,10 +37,6 @@ namespace UserMaintenance
         private void Btnfajlba_Click(object sender, EventArgs e)
         {
             SaveFileDialog sf = new SaveFileDialog();
-            sf.InitialDirectory = Application.StartupPath;
-            sf.Filter = "Comma Spereated Values (.csv)|.csv";
-            sf.DefaultExt = "csv";
-            sf.AddExtension = true;
             if (sf.ShowDialog() != DialogResult.OK) return;
             using (StreamWriter sw = new StreamWriter(sf.FileName, false, Encoding.UTF8))
             {
@@ -53,6 +49,13 @@ namespace UserMaintenance
                 }
 
             }
+        }
+
+        private void Listtorol_Click(object sender, EventArgs e)
+        {
+            User torlendo = (User)listUsers.SelectedItem;
+            users.Remove(torlendo);            
+            
         }
     }
 }

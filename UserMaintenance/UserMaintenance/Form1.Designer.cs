@@ -35,6 +35,7 @@
             this.lblFirstName = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnfajlba = new System.Windows.Forms.Button();
+            this.listtorol = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listUsers
@@ -89,7 +90,7 @@
             // 
             // btnfajlba
             // 
-            this.btnfajlba.Location = new System.Drawing.Point(486, 383);
+            this.btnfajlba.Location = new System.Drawing.Point(486, 303);
             this.btnfajlba.Name = "btnfajlba";
             this.btnfajlba.Size = new System.Drawing.Size(148, 23);
             this.btnfajlba.TabIndex = 6;
@@ -97,11 +98,22 @@
             this.btnfajlba.UseVisualStyleBackColor = true;
             this.btnfajlba.Click += new System.EventHandler(this.Btnfajlba_Click);
             // 
+            // listtorol
+            // 
+            this.listtorol.Location = new System.Drawing.Point(486, 356);
+            this.listtorol.Name = "listtorol";
+            this.listtorol.Size = new System.Drawing.Size(148, 23);
+            this.listtorol.TabIndex = 7;
+            this.listtorol.Text = "Listából törlés";
+            this.listtorol.UseVisualStyleBackColor = true;
+            this.listtorol.Click += new System.EventHandler(this.Listtorol_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listtorol);
             this.Controls.Add(this.btnfajlba);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblFirstName);
@@ -125,6 +137,7 @@
         private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnfajlba;
+        private System.Windows.Forms.Button listtorol;
     }
 }
 
