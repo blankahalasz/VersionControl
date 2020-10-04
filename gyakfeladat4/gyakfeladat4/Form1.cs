@@ -10,9 +10,11 @@ using System.Windows.Forms;
 
 namespace gyakfeladat4
 {
+    using Excel = Microsoft.Office.Interop.Excel;
+    using System.Reflection;
     public partial class Form1 : Form
     {
-        RealEstateEntities context = new RealEstateEntities();
+                RealEstateEntities context = new RealEstateEntities();
         List<Flat> Flats;
 
         public Form1()
