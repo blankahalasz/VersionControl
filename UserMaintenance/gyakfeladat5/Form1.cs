@@ -1,4 +1,5 @@
-﻿using System;
+﻿using gyakfeladat5.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,16 +12,24 @@ using System.Windows.Forms;
 namespace gyakfeladat5
 {
     
+
     public partial class Form1 : Form
     {
         PortfolioEntities context = new PortfolioEntities();
         List<Tick> Ticks;
+        List<PortfolioItem> Portfolio = new List<PortfolioItem>();
 
         public Form1()
         {
             InitializeComponent();
             Ticks = context.Ticks.ToList();
             dataGridView1.DataSource = Ticks;
+
+            Portfolio.Add(new PortfolioItem() { Index = "OTP", Volume = 10 });
+            Portfolio.Add(new PortfolioItem() { Index = "ZWAK", Volume = 10 });
+            Portfolio.Add(new PortfolioItem() { Index = "WLMU", Volume = 10 });
+
+            dataGridView2.DataSource = Portfolio;
         }
     }
 }
