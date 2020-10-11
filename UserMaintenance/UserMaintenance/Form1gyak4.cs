@@ -12,14 +12,14 @@ using UserMaintenance.Entities;
 
 namespace UserMaintenance
 {
-    public partial class Form1 : Form
+    public partial class Form1gyak4 : Form
     {
         BindingList<User> users = new BindingList<User>();
-        public Form1()
+        public Form1gyak4()
         {
             InitializeComponent();
-            lblLastName.Text = Resource.LastName;
-            lblFirstName.Text = Resource.FirstName;
+            lblLastName.Text = Resource.FullName;
+          
             btnAdd.Text = Resource.Add;
 
             listUsers.DataSource = users;

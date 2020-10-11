@@ -56,11 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\PortfolioItem.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Form1gyak5.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form1gyak5.Designer.cs">
+      <DependentUpon>Form1gyak5.cs</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -82,8 +82,8 @@
     <Compile Include="Tick.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form1gyak5.resx">
+      <DependentUpon>Form1gyak5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

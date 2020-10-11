@@ -1,6 +1,6 @@
 ﻿namespace gyakfeladat5
 {
-    partial class Form1
+    partial class Form1gyak5
     {
         /// <summary>
         /// Required designer variable.

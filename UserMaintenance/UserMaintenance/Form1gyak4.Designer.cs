@@ -1,6 +1,6 @@
 ﻿namespace UserMaintenance
 {
-    partial class Form1
+    partial class Form1gyak4
     {
         /// <summary>
         /// Required designer variable.
