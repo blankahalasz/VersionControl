@@ -1,4 +1,5 @@
-﻿using gyakfeladat6.MnbServiceReference;
+﻿using gyakfeladat6.Entities;
+using gyakfeladat6.MnbServiceReference;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +14,16 @@ namespace gyakfeladat6
 {
     public partial class Form1 : Form
     {
+        BindingList<RateData> Rates = new BindingList<RateData>();
         public Form1()
         {
             InitializeComponent();
             GetExchangeRates();
+            dataGridView1.DataSource = Rates;
 
         }
 
+        
         private static void GetExchangeRates()
         {
             var MnbService = new MNBArfolyamServiceSoapClient();
