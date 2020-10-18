@@ -17,14 +17,24 @@ namespace gyakfeladat6
     public partial class Form1 : Form
     {
         BindingList<RateData> Rates = new BindingList<RateData>();
+        BindingList<string> Currencies = new BindingList<string>();
         public Form1()
         {
             InitializeComponent();
-            GetExchangeRates();
             dataGridView1.DataSource = Rates;
+            comboBox1.DataSource = Currencies;
+
+            var mnbService = new MNBArfolyamServiceSoapClient();
+            var request = new GetCurrencyUnitsRequestBody();
+
+            GetExchangeRates();
+           
 
             Xmlprocess();
             RefreshData();
+
+
+            
 
         }
 
@@ -55,6 +65,7 @@ namespace gyakfeladat6
             {
                 var rate = new RateData();
                 Rates.Add(rate);
+
                 rate.Date = DateTime.Parse(element.GetAttribute("date"));
                 var childElement = (XmlElement)element.ChildNodes[0];
                 rate.Currency = childElement.GetAttribute("curr");
@@ -72,9 +83,10 @@ namespace gyakfeladat6
 
             var request = new GetExchangeRatesRequestBody()
             {
-                currencyNames = "EUR",
-                startDate = "2020-01-01",
-                endDate = "2020-06-30"
+                currencyNames = comboBox1.SelectedItem.ToString(),
+                startDate = DateTimePicker1.Value.ToString(),
+                endDate = DateTimePicker2.Value.ToString()
+
 
             };
 
