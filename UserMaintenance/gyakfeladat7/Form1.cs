@@ -20,6 +20,8 @@ namespace gyakfeladat7
         List<DeathProbability> DeathProbabilities = new List<DeathProbability>();
         Random rng = new Random(1212);
 
+        List<int> man = new List<int>();
+        List<int> woman = new List<int>();
 
         public Form1()
         {
@@ -28,11 +30,16 @@ namespace gyakfeladat7
             BirthProbabilities = GetBirthProbabilites(@"C:\Temp\születés.csv");
             DeathProbabilities = GetDeathProbabilities(@"C:\Temp\halál.csv");
 
+            
+        }
+
+        private void Simulation()
+        {
             for (int year = 2005; year <= 2024; year++)
             {
                 for (int i = 0; i < Population.Count; i++)
                 {
-                    
+
                 }
 
                 int nbrOfMales = (from x in Population
@@ -46,12 +53,12 @@ namespace gyakfeladat7
 
                 string.Format("Év:{0} Fiúk:{1} Lányok:{2}", year, nbrOfMales, nbrOfFemales));
 
-
+                man.Add(nbrOfMales);
+                woman.Add(nbrOfFemales);
             }
         }
 
 
-       
 
         private static List<Person> GetPopulation(string csvpath)
         {
@@ -152,6 +159,31 @@ namespace gyakfeladat7
             }
         }
 
+        private void Startbutton_Click(object sender, EventArgs e)
+        {
+            Simulation();
+            richTextBox1.Clear();
+            DisplayResults();
 
+        }
+
+        private void DisplayResults()
+        {
+            for (int year = 2005; year <= numericUpDown1.Value; year++)
+            {
+                richTextBox1.AppendText("Szimulációs év: " + year + "\n\t Fiúk: " + man[year - 2005] + "\n\t Lányok: " + woman[year - 2005] + "\n");
+            }
+        }
+
+        private void Browsebutton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                elerestextbox.Text = ofd.FileName;
+            }
+            Population = GetPopulation(@"C:\Temp\nép.csv");
+        }
     }
 }
