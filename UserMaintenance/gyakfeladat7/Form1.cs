@@ -18,8 +18,8 @@ namespace gyakfeladat7
         List<Person> Population = new List<Person>();
         List<Birthprobability> BirthProbabilities = new List<Birthprobability>();
         List<DeathProbability> DeathProbabilities = new List<DeathProbability>();
+        Random rng = new Random(1212);
 
-        
 
         public Form1()
         {
