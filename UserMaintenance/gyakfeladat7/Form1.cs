@@ -42,9 +42,14 @@ namespace gyakfeladat7
                                     where x.Gender == Gender.Female && x.IsAlive
                                     select x).Count();
                 Console.WriteLine(
-                    string.Format("Év:{0} Fiúk:{1} Lányok:{2}", year, nbrOfMales, nbrOfFemales));
+
+
+                string.Format("Év:{0} Fiúk:{1} Lányok:{2}", year, nbrOfMales, nbrOfFemales));
+
+
             }
         }
+
 
        
 
@@ -146,5 +151,7 @@ namespace gyakfeladat7
                 }
             }
         }
+
+
     }
 }
