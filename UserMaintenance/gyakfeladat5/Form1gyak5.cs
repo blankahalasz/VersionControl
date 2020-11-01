@@ -28,7 +28,7 @@ namespace gyakfeladat5
             CreatePortfolio();
             
 
-            dataGridView2.DataSource = Portfolio;
+            
 
             List<decimal> Nyereségek = new List<decimal>();
             int intervalum = 30;
@@ -55,8 +55,10 @@ namespace gyakfeladat5
         private void CreatePortfolio()
         {
             Portfolio.Add(new PortfolioItem() { Index = "OTP", Volume = 10 });
-            Portfolio.Add(new PortfolioItem() { Index = "ZWAK", Volume = 10 });
-            Portfolio.Add(new PortfolioItem() { Index = "WLMU", Volume = 10 });
+            Portfolio.Add(new PortfolioItem() { Index = "ZWACK", Volume = 10 });
+            Portfolio.Add(new PortfolioItem() { Index = "ELMU", Volume = 10 });
+
+            dataGridView2.DataSource = Portfolio;
         }
 
         public decimal GetPortfolioValue(DateTime date)
@@ -66,8 +68,9 @@ namespace gyakfeladat5
             {
                 var last = (from x in Ticks
                             where item.Index == x.Index.Trim()
-                            && date <= x.TradingDay
-                            select x).First();
+                               && date <= x.TradingDay
+                            select x)
+                            .First();
                 value += (decimal)last.Price * item.Volume;
             }
             return value;
