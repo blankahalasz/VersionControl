@@ -9,7 +9,7 @@ namespace gyakfeladat7.Entities
     class DeathProbability
     {
         public Gender Gender { get; set; }
-        public int BirthYear { get; set; }
-        public double Probability { get; set; }
+        public int Age { get; set; }
+        public double DProbability { get; set; }
     }
 }
