@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace gyak_8_gwsb1a.Entities
 {
-    public class BallFactory : IToyFactory
+    class CarFactory : IToyFactory
     {
         public Toy CreateNew()
         {
