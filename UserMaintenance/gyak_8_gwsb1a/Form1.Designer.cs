@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.mainpanel = new System.Windows.Forms.Panel();
+            this.buttonSzinvalaszto = new System.Windows.Forms.Button();
             this.buttonBall = new System.Windows.Forms.Button();
             this.buttonCar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,6 +45,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainpanel.BackColor = System.Drawing.SystemColors.Control;
+            this.mainpanel.Controls.Add(this.buttonSzinvalaszto);
             this.mainpanel.Controls.Add(this.buttonBall);
             this.mainpanel.Controls.Add(this.buttonCar);
             this.mainpanel.Controls.Add(this.label1);
@@ -51,6 +53,16 @@
             this.mainpanel.Name = "mainpanel";
             this.mainpanel.Size = new System.Drawing.Size(737, 382);
             this.mainpanel.TabIndex = 0;
+            // 
+            // buttonSzinvalaszto
+            // 
+            this.buttonSzinvalaszto.BackColor = System.Drawing.Color.Coral;
+            this.buttonSzinvalaszto.Location = new System.Drawing.Point(269, 24);
+            this.buttonSzinvalaszto.Name = "buttonSzinvalaszto";
+            this.buttonSzinvalaszto.Size = new System.Drawing.Size(75, 23);
+            this.buttonSzinvalaszto.TabIndex = 3;
+            this.buttonSzinvalaszto.UseVisualStyleBackColor = false;
+            this.buttonSzinvalaszto.Click += new System.EventHandler(this.ButtonSzinvalaszto_Click);
             // 
             // buttonBall
             // 
@@ -75,7 +87,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(295, 24);
+            this.label1.Location = new System.Drawing.Point(381, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 0;
@@ -115,6 +127,7 @@
         private System.Windows.Forms.Button buttonBall;
         private System.Windows.Forms.Button buttonCar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonSzinvalaszto;
     }
 }
 
