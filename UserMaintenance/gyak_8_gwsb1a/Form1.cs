@@ -27,7 +27,7 @@ namespace gyak_8_gwsb1a
         {
             InitializeComponent();
             Factory = new BallFactory();
-            mainpanel.BackColor = Color.Blue;
+            
         }
 
         private void CreateTimer_Tick(object sender, EventArgs e)
@@ -54,6 +54,7 @@ namespace gyak_8_gwsb1a
             {
                 var oldestBall = _balls[0];
                 mainpanel.Controls.Remove(oldestBall);
+                _balls.Remove(oldestBall);
             }
         }
     }
