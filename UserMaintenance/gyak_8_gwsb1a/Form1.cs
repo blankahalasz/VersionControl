@@ -80,7 +80,10 @@ namespace gyak_8_gwsb1a
 
         private void ButtonBall_Click(object sender, EventArgs e)
         {
-            Factory = new BallFactory();
+            Factory = new BallFactory()
+            {
+                BallColor = buttonBall.BackColor
+            };
         }
 
         private void ButtonSzinvalaszto_Click(object sender, EventArgs e)
