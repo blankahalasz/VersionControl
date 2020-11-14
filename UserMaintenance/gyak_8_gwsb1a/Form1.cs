@@ -16,24 +16,38 @@ namespace gyak_8_gwsb1a
     {
         private List<Toy> _toys = new List<Toy>();
 
-        private BallFactory _factory;
-        public BallFactory IToyFactory
+        private Toy _nextToy;
+        private IToyFactory _factory;
+        public IToyFactory Factory
         {
             get { return _factory; }
-            set { _factory = value; }
+            set
+            {
+                _factory = value;
+                DisplayNext();
+            }
         }
 
+        private void DisplayNext()
+        {
+            if (_nextToy != null)
+                Controls.Remove(_nextToy);
+            _nextToy = Factory.CreateNew();
+            _nextToy.Top = label1.Top + label1.Height + 20;
+            _nextToy.Left = label1.Left;
+            Controls.Add(_nextToy);
+        }
 
         public Form1()
         {
             InitializeComponent();
-            IToyFactory = new BallFactory();
+            Factory = new BallFactory();
             
         }
 
         private void CreateTimer_Tick(object sender, EventArgs e)
         {
-            var toy = IToyFactory.CreateNew();
+            var toy = Factory.CreateNew();
             _toys.Add(toy);
             Left = -toy.Width;
             mainpanel.Controls.Add(toy);
@@ -57,6 +71,16 @@ namespace gyak_8_gwsb1a
                 mainpanel.Controls.Remove(oldestBall);
                 _toys.Remove(oldestBall);
             }
+        }
+
+        private void ButtonCar_Click(object sender, EventArgs e)
+        {
+            Factory = new CarFactory();
+        }
+
+        private void ButtonBall_Click(object sender, EventArgs e)
+        {
+            Factory = new BallFactory();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace gyak_8_gwsb1a.Abstractions
 {
-    interface IToyFactory
+    public interface IToyFactory
     {
         Toy CreateNew();
     }
