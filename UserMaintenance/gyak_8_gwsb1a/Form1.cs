@@ -1,4 +1,5 @@
-﻿using gyak_8_gwsb1a.Entities;
+﻿using gyak_8_gwsb1a.Abstractions;
+using gyak_8_gwsb1a.Entities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,10 +14,10 @@ namespace gyak_8_gwsb1a
 {
     public partial class Form1 : Form
     {
-        private List<Ball> _balls = new List<Ball>();
+        private List<Toy> _toys = new List<Toy>();
 
         private BallFactory _factory;
-        public BallFactory Factory
+        public BallFactory IToyFactory
         {
             get { return _factory; }
             set { _factory = value; }
@@ -26,35 +27,35 @@ namespace gyak_8_gwsb1a
         public Form1()
         {
             InitializeComponent();
-            Factory = new BallFactory();
+            IToyFactory = new BallFactory();
             
         }
 
         private void CreateTimer_Tick(object sender, EventArgs e)
         {
-            var ball = Factory.CreateNew();
-            _balls.Add(ball);
-            Left = -ball.Width;
-            mainpanel.Controls.Add(ball);
+            var toy = IToyFactory.CreateNew();
+            _toys.Add(toy);
+            Left = -toy.Width;
+            mainpanel.Controls.Add(toy);
         }
 
         private void ConveyorTimer_Tick(object sender, EventArgs e)
         {
             var maxPosition = 0;
-            foreach (var ball in _balls)
+            foreach (var toy in _toys)
             {
-                ball.MoveBall();
-                if (ball.Left > maxPosition)
+                toy.MoveToy();
+                if (toy.Left > maxPosition)
                 {
-                    maxPosition = ball.Left;
+                    maxPosition = toy.Left;
                 }
             }
 
             if (maxPosition > 1000)
             {
-                var oldestBall = _balls[0];
+                var oldestBall = _toys[0];
                 mainpanel.Controls.Remove(oldestBall);
-                _balls.Remove(oldestBall);
+                _toys.Remove(oldestBall);
             }
         }
     }

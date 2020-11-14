@@ -26,7 +26,7 @@ namespace gyak_8_gwsb1a.Abstractions
 
         protected abstract void DrawImage(Graphics g);
         
-        public void MoveBall()
+        public void MoveToy()
         {
             Left += 1;
         }
