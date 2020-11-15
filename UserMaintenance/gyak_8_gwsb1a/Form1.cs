@@ -42,6 +42,8 @@ namespace gyak_8_gwsb1a
         {
             InitializeComponent();
             Factory = new BallFactory();
+            Factory = new CarFactory();
+            //Factory = new PresentFactory();
             
         }
 
@@ -60,16 +62,14 @@ namespace gyak_8_gwsb1a
             {
                 toy.MoveToy();
                 if (toy.Left > maxPosition)
-                {
                     maxPosition = toy.Left;
-                }
-            }
+             }
 
             if (maxPosition > 1000)
             {
-                var oldestBall = _toys[0];
-                mainpanel.Controls.Remove(oldestBall);
-                _toys.Remove(oldestBall);
+                var oldestToy = _toys[0];
+                mainpanel.Controls.Remove(oldestToy);
+                _toys.Remove(oldestToy);
             }
         }
 
@@ -82,7 +82,7 @@ namespace gyak_8_gwsb1a
         {
             Factory = new BallFactory()
             {
-                BallColor = buttonBall.BackColor
+                BallColor = buttonSzinvalaszto.BackColor
             };
         }
 
@@ -95,6 +95,11 @@ namespace gyak_8_gwsb1a
             if (colorPicker.ShowDialog() != DialogResult.OK)
                 return;
             button.BackColor = colorPicker.Color;
+        }
+
+        private void ButtonPresent_Click(object sender, EventArgs e)
+        {
+            Factory = new CarFactory();
         }
     }
 }

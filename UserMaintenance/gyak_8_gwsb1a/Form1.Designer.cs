@@ -36,6 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.createTimer = new System.Windows.Forms.Timer(this.components);
             this.conveyorTimer = new System.Windows.Forms.Timer(this.components);
+            this.buttonPresent = new System.Windows.Forms.Button();
             this.mainpanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainpanel.BackColor = System.Drawing.SystemColors.Control;
+            this.mainpanel.Controls.Add(this.buttonPresent);
             this.mainpanel.Controls.Add(this.buttonSzinvalaszto);
             this.mainpanel.Controls.Add(this.buttonBall);
             this.mainpanel.Controls.Add(this.buttonCar);
@@ -57,7 +59,7 @@
             // buttonSzinvalaszto
             // 
             this.buttonSzinvalaszto.BackColor = System.Drawing.Color.Coral;
-            this.buttonSzinvalaszto.Location = new System.Drawing.Point(269, 24);
+            this.buttonSzinvalaszto.Location = new System.Drawing.Point(156, 276);
             this.buttonSzinvalaszto.Name = "buttonSzinvalaszto";
             this.buttonSzinvalaszto.Size = new System.Drawing.Size(75, 23);
             this.buttonSzinvalaszto.TabIndex = 3;
@@ -66,7 +68,7 @@
             // 
             // buttonBall
             // 
-            this.buttonBall.Location = new System.Drawing.Point(149, 24);
+            this.buttonBall.Location = new System.Drawing.Point(156, 228);
             this.buttonBall.Name = "buttonBall";
             this.buttonBall.Size = new System.Drawing.Size(75, 23);
             this.buttonBall.TabIndex = 2;
@@ -76,7 +78,7 @@
             // 
             // buttonCar
             // 
-            this.buttonCar.Location = new System.Drawing.Point(31, 24);
+            this.buttonCar.Location = new System.Drawing.Point(31, 228);
             this.buttonCar.Name = "buttonCar";
             this.buttonCar.Size = new System.Drawing.Size(75, 23);
             this.buttonCar.TabIndex = 1;
@@ -87,7 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(381, 24);
+            this.label1.Location = new System.Drawing.Point(391, 231);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 0;
@@ -104,6 +106,16 @@
             this.conveyorTimer.Enabled = true;
             this.conveyorTimer.Interval = 10;
             this.conveyorTimer.Tick += new System.EventHandler(this.ConveyorTimer_Tick);
+            // 
+            // buttonPresent
+            // 
+            this.buttonPresent.Location = new System.Drawing.Point(271, 228);
+            this.buttonPresent.Name = "buttonPresent";
+            this.buttonPresent.Size = new System.Drawing.Size(84, 23);
+            this.buttonPresent.TabIndex = 4;
+            this.buttonPresent.Text = "PRESENT";
+            this.buttonPresent.UseVisualStyleBackColor = true;
+            this.buttonPresent.Click += new System.EventHandler(this.ButtonPresent_Click);
             // 
             // Form1
             // 
@@ -128,6 +140,7 @@
         private System.Windows.Forms.Button buttonCar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonSzinvalaszto;
+        private System.Windows.Forms.Button buttonPresent;
     }
 }
 
