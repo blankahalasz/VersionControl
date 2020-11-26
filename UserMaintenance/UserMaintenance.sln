@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gyakfeladat5", "gyakfeladat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gyak_8_gwsb1a", "gyak_8_gwsb1a\gyak_8_gwsb1a.csproj", "{15353F2C-DBE4-49BE-912C-351C3302B7E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gyakfeladat10", "gyakfeladat10\gyakfeladat10.csproj", "{F086DD6F-0369-4B13-B8E0-C9E361B2DD4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{15353F2C-DBE4-49BE-912C-351C3302B7E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15353F2C-DBE4-49BE-912C-351C3302B7E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15353F2C-DBE4-49BE-912C-351C3302B7E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F086DD6F-0369-4B13-B8E0-C9E361B2DD4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F086DD6F-0369-4B13-B8E0-C9E361B2DD4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F086DD6F-0369-4B13-B8E0-C9E361B2DD4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F086DD6F-0369-4B13-B8E0-C9E361B2DD4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
